@@ -44,7 +44,7 @@ int findDuplicate(const int Bananas[], int n) {
       isFound[i] = false; 
     }
   for (int i = 0; i < n; i++) {
-    if (isFound[Bananas[i]] = true) {
+    if (isFound[Bananas[i]] == true) {
         return Bananas[i];  
         }
     isFound[Bananas[i]] = true;
@@ -153,11 +153,18 @@ int sumDigits(int Bananas) {
     cout << endl;
 
      // Test combineBananas function
-    Node* head1 = new Node{ 1, nullptr };
-    Node* head2 = new Node{ 2, nullptr };
-    Node* node1 = new Node{ 3, nullptr };
-    Node* node2 = new Node{ 4, nullptr };
-    Node* node3 = new Node{ 5, nullptr };
+    Node* head1 = new Node;
+    //{ 1, nullptr };
+    head1->val = 1;
+    head1->next = nullptr;
+    Node* head2 = new Node;
+    head2->val = 2;
+    Node* node1 = new Node;
+    node1->val = 3;
+    Node* node2 = new Node;
+    node2-> val = 4;
+    Node* node3 = new Node;
+    node3->val = 5;
     head1->next = node1;
     node1->next = node3;
     head2->next = node2;
